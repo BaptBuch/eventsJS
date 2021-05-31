@@ -79,13 +79,13 @@ small()
 
 //Fonctionnalité 7
 function droite(){
-  let fleche = document.querySelector('.btn-secondary')
-  let first = document.querySelector(".col-md-4")
-  let liste = document.querySelectorAll(".col-md-4")
-  let last = liste[liste.length- 1]
-  fleche.addEventListener("click", function(){
-    first.parentElement.insertBefore(last, first)
-  })
+  let rightArrow = document.querySelector(".btn-secondary.my-2");
+  rightArrow.addEventListener("click", function () {
+  let allCards = document.querySelectorAll(".col-md-4");
+  let lastCard = document.querySelectorAll(".col-md-4")[5];
+  let parent = lastCard.parentElement;
+  parent.insertBefore(allCards[5], allCards[0]);
+});
 }
 droite()
 
